@@ -10,9 +10,12 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 
 public class PrimeiraClasseJava {
-
+	
+	/* Main é um metodo auto executavel em Java*/
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		
 		
@@ -20,20 +23,14 @@ public class PrimeiraClasseJava {
 		String login = JOptionPane.showInputDialog("Informe o logi");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		Secretario secretario = new Secretario();/*Diretamente com o objeto*/
 		
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
-		
-		
-		
-		
-		
-		if(secretario.autenticar()) {
+		PermitirAcesso permitirAcesso = new Secretario(login, senha);
+				
+		if( permitirAcesso.autenticar()) {/*se TRUE acessa se FALSE não acessa*/
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		/*é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores també*/
+		/*é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também*/
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		
 		for(int qtd = 1; qtd <=5; qtd++) {
@@ -130,7 +127,7 @@ public class PrimeiraClasseJava {
 	}
 
 		}else {
-			JOptionPane.showConfirmDialog(null,"Acesso não permitido");
+			JOptionPane.showMessageDialog(null,"Acesso não permitido");
 		}
 	}
 
