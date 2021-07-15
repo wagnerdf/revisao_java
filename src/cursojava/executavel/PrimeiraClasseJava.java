@@ -32,7 +32,7 @@ public class PrimeiraClasseJava {
 		/*é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também*/
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 		
-		for(int qtd = 1; qtd <=5; qtd++) {
+		for(int qtd = 1; qtd <=2; qtd++) {
 		
 		/* new Aluno() é uma instancia (Criação de Objeto)*/
 		/* aluno1 é uma referencia para o objeto aluno*/
@@ -73,7 +73,7 @@ public class PrimeiraClasseJava {
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
-			disciplina.setNota(Double.valueOf(notaDisciplina));
+			//disciplina.setNota(Double.valueOf(notaDisciplina));
 			
 			aluno1.getDisciplinas().add(disciplina);
 		}
