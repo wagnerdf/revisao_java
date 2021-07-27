@@ -25,6 +25,7 @@ public class Arquivos {
 		pessoa3.setIdade(25);
 		pessoa3.setNome("Raquel Rios");
 		
+		/*Pode vir do banco de dados ou qualquer fonte de dados*/
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		pessoas.add(pessoa1);
 		pessoas.add(pessoa2);
