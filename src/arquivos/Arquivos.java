@@ -25,14 +25,20 @@ public class Arquivos {
 		pessoa3.setIdade(25);
 		pessoa3.setNome("Raquel Rios");
 		
+		Pessoa pessoa4 = new Pessoa();
+		pessoa4.setEmail("pessoa4@gmail.com");
+		pessoa4.setIdade(17);
+		pessoa4.setNome("Bruna Rios");
+		
 		/*Pode vir do banco de dados ou qualquer fonte de dados*/
 		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		pessoas.add(pessoa1);
 		pessoas.add(pessoa2);
 		pessoas.add(pessoa3);
+		pessoas.add(pessoa4);
 		
 		
-		File arquivo = new File("D:\\Documentos\\Projetos programação\\ws-eclipse\\curso_programacao\\src\\arquivos\\arquivo.txt");
+		File arquivo = new File("D:\\Documentos\\Projetos programação\\ws-eclipse\\curso_programacao\\src\\arquivos\\arquivo.csv");
 		
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
@@ -43,7 +49,7 @@ public class Arquivos {
 		
 		for(Pessoa p : pessoas) {
 			
-			escrever_no_arquivo.write(p.getNome()+" ; "+p.getIdade()+" ; "+p.getEmail()+"\n");
+			escrever_no_arquivo.write(p.getNome()+";"+p.getIdade()+";"+p.getEmail()+"\n");
 			
 		}
 		

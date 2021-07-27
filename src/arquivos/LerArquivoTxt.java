@@ -11,8 +11,8 @@ public class LerArquivoTxt {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		FileInputStream entradaArquivo = 
-				new FileInputStream(new File("D:\\Documentos\\Projetos programação\\ws-eclipse\\curso_programacao\\src\\arquivos\\arquivo.txt"));
+		FileInputStream entradaArquivo = new FileInputStream(
+				new File("D:\\Documentos\\Projetos programação\\ws-eclipse\\curso_programacao\\src\\arquivos\\arquivo.csv"));
 		
 		Scanner lerArquivo = new Scanner(entradaArquivo, "UTF-8");
 		
@@ -24,13 +24,14 @@ public class LerArquivoTxt {
 			
 			if (linha != null && !linha.isEmpty()) {
 				
-				String[] dados = linha.split("\\|");
+				String[] dados = linha.split("\\;");
 				
 				
 				Pessoa pessoa = new Pessoa();
 				pessoa.setNome(dados[0]);
 				pessoa.setIdade(Integer.parseInt(dados[1]));
 				pessoa.setEmail(dados[2]);
+				
 				
 				
 				
