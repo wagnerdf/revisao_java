@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.formula.functions.Rows;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
@@ -80,6 +79,9 @@ public class ApachePoi {
 		saida.close();
 		
 		System.out.println("Planilha foi criada");
+	
+		
+		hssfworkbook.close();
 	}
 }
 
